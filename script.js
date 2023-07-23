@@ -4,8 +4,8 @@ let computerScore = 0;
 const GAME_LOST = "Too Bad! Computer won this game!";
 const GAME_WON = "Congratulations! You won this game!";
 
-const USER_ROUND_WON = "You are a winner!";
-const USER_ROUND_LOST = "You lost!";
+const USER_ROUND_WON = "You won this round!";
+const USER_ROUND_LOST = "You lost this round!";
 const USER_ROUND_TIE = "It's a tie!";
 
 
@@ -48,22 +48,35 @@ function playRound() {
 
 // console.log(playRound());
 
+
 function game() {
   for (let i = 0; i < 5; i++) {
     const roundResult = playRound();
-
     console.log(roundResult);
-  }
+    decideRoundWinner(roundResult);
 }
-
-console.log(game());
+}
 
 function decideRoundWinner(roundResult) {
   if(roundResult === USER_ROUND_WON) {
-    playerScore += 1;
+     playerScore += 1;
+  }
+  if (roundResult === USER_ROUND_LOST) {
+     computerScore += 1;
   }
 }
 
-function decideGameWinner() {
 
+function decideGameWinner() {
+    if (playerScore > computerScore) {
+        alert(GAME_WON);
+    }
+    if (playerScore < computerScore) {
+        alert(GAME_LOST);
+    }
+    // alert('IT\'S A DRAW');
 }
+
+game();
+decideGameWinner();
+
