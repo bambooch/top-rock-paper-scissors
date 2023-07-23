@@ -80,3 +80,5 @@ function decideGameWinner() {
 game();
 decideGameWinner();
 
+playerScore = 0;
+computerScore = 0;
