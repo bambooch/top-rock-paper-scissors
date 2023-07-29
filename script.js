@@ -32,18 +32,18 @@ function playRound() {
   let computerSelection = getComputerChoice();
 
   if (playerSelection === computerSelection) {
-    return USER_ROUND_TIE;
+    return USER_ROUND_TIE_MSSG;
   }
   if (playerSelection === "rock" && computerSelection === "scissors") {
-    return USER_ROUND_WON;
+    return USER_ROUND_WON_MSSG;
   }
   if (playerSelection === "paper" && computerSelection === "rock") {
-    return USER_ROUND_WON;
+    return USER_ROUND_WON_MSSG;
   }
   if (playerSelection === "scissors" && computerSelection === "paper") {
-    return USER_ROUND_WON;
+    return USER_ROUND_WON_MSSG;
   }
-  return USER_ROUND_LOST;
+  return USER_ROUND_LOST_MSSG;
 }
 
 // console.log(playRound());
@@ -58,10 +58,10 @@ function game() {
 }
 
 function decideRoundWinner(roundResult) {
-  if(roundResult === USER_ROUND_WON) {
+  if(roundResult === USER_ROUND_WON_MSSG) {
      playerScore += 1;
   }
-  if (roundResult === USER_ROUND_LOST) {
+  if (roundResult === USER_ROUND_LOST_MSSG) {
      computerScore += 1;
   }
 }
@@ -69,10 +69,10 @@ function decideRoundWinner(roundResult) {
 
 function decideGameWinner() {
     if (playerScore > computerScore) {
-        alert(GAME_WON);
+        alert(GAME_WON_MSSG);
     }
     if (playerScore < computerScore) {
-        alert(GAME_LOST);
+        alert(GAME_LOST_MSSG);
     }
     // alert('IT\'S A DRAW');
 }
