@@ -1,12 +1,12 @@
 let playerScore = 0;
 let computerScore = 0;
 
-const GAME_LOST = "Too Bad! Computer won this game!";
-const GAME_WON = "Congratulations! You won this game!";
+const GAME_LOST_MSSG= "Too Bad! Computer won this game!";
+const GAME_WON_MSSG = "Congratulations! You won this game!";
 
-const USER_ROUND_WON = "You won this round!";
-const USER_ROUND_LOST = "You lost this round!";
-const USER_ROUND_TIE = "It's a tie!";
+const USER_ROUND_WON_MSSG = "You won this round!";
+const USER_ROUND_LOST_MSSG = "You lost this round!";
+const USER_ROUND_TIE_MSSG = "It's a tie!";
 
 
 function getComputerChoice() {
