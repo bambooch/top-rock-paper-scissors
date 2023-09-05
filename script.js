@@ -20,7 +20,7 @@ function getComputerChoice() {
 
 function getPlayerSelection() {
   let playerSelectionPrompt = prompt(
-    "Choose your weapon: ROCK, PAPER or SCISSORS!"
+    "Make your choice: ROCK, PAPER or SCISSORS!"
   ).toLowerCase();
   return playerSelectionPrompt;
 }
