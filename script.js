@@ -68,6 +68,31 @@ function decideGameWinner() {
     // alert('IT\'S A DRAW');
 }
 
-game();
+// game();
 decideGameWinner();
 
+  
+// Creating elements
+
+const buttons = ['rock', 'scissor', 'paper'];
+
+const container = document.querySelector('#container');
+
+buttons.forEach((btnText) => {
+  const newButton = document.createElement('button');
+  newButton.textContent = btnText;
+  newButton.classList.add(`${btnText}-btn`);
+  container.append(newButton);
+});
+
+// const rockButton = document.createElement('button');
+// rockButton.classList.add('rock-bttn');
+// rockButton.textContent = 'ROCK';
+// const paperButton = document.createElement('button');
+// paperButton.classList.add('paper-bttn');
+// paperButton.textContent = 'PAPER';
+// const scissorsButton = document.createElement('button');
+// scissorsButton.textContent = 'SCISSORS';
+// // scissorsButton.classList.add()
+// container.append(rockButton, paperButton, scissorsButton);
+// container.append(rockButton);
