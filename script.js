@@ -74,9 +74,9 @@ decideGameWinner();
   
 // Creating elements
 
-const buttons = ['rock', 'scissor', 'paper'];
-
 const container = document.querySelector('#container');
+const resultDisplay = document.createElement('div');
+const buttons = ['rock', 'scissor', 'paper'];
 
 buttons.forEach((btnText) => {
   const newButton = document.createElement('button');
