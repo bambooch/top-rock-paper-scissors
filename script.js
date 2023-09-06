@@ -1,12 +1,11 @@
+// Implement Array for const messages
+
+
 let playerScore = 0;
 let computerScore = 0;
 
 const GAME_LOST = "Too Bad! Computer won this game!";
 const GAME_WON = "Congratulations! You won this game!";
-
-const USER_ROUND_WON = "You won this round!";
-const USER_ROUND_LOST = "You lost this round!";
-const USER_ROUND_TIE = "It's a tie!";
 
 
 function getComputerChoice() {
@@ -48,14 +47,6 @@ function playRound() {
 
 // console.log(playRound());
 
-
-function game() {
-  for (let i = 0; i < 5; i++) {
-    const roundResult = playRound();
-    console.log(roundResult);
-    decideRoundWinner(roundResult);
-}
-}
 
 function decideRoundWinner(roundResult) {
   if(roundResult === USER_ROUND_WON) {
