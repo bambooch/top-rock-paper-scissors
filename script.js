@@ -4,9 +4,16 @@
 let playerScore = 0;
 let computerScore = 0;
 
-const GAME_LOST = "Too Bad! Computer won this game!";
-const GAME_WON = "Congratulations! You won this game!";
+const GAME_LOST_MSSG= "Too Bad! Computer won this game!";
+const GAME_WON_MSSG = "Congratulations! You won this game!";
 
+<<<<<<< HEAD
+=======
+const USER_ROUND_WON_MSSG = "You won this round!";
+const USER_ROUND_LOST_MSSG = "You lost this round!";
+const USER_ROUND_TIE_MSSG = "It's a tie!";
+
+>>>>>>> bf2b26b4cb4006e8d43e2225a44c2a9a5635c12d
 
 function getComputerChoice() {
   const computerSelection = ["rock", "paper", "scissors"];
@@ -19,7 +26,7 @@ function getComputerChoice() {
 
 function getPlayerSelection() {
   let playerSelectionPrompt = prompt(
-    "Choose your weapon: ROCK, PAPER or SCISSORS!"
+    "Make your choice: ROCK, PAPER or SCISSORS!"
   ).toLowerCase();
   return playerSelectionPrompt;
 }
@@ -31,28 +38,28 @@ function playRound() {
   let computerSelection = getComputerChoice();
 
   if (playerSelection === computerSelection) {
-    return USER_ROUND_TIE;
+    return USER_ROUND_TIE_MSSG;
   }
   if (playerSelection === "rock" && computerSelection === "scissors") {
-    return USER_ROUND_WON;
+    return USER_ROUND_WON_MSSG;
   }
   if (playerSelection === "paper" && computerSelection === "rock") {
-    return USER_ROUND_WON;
+    return USER_ROUND_WON_MSSG;
   }
   if (playerSelection === "scissors" && computerSelection === "paper") {
-    return USER_ROUND_WON;
+    return USER_ROUND_WON_MSSG;
   }
-  return USER_ROUND_LOST;
+  return USER_ROUND_LOST_MSSG;
 }
 
 // console.log(playRound());
 
 
 function decideRoundWinner(roundResult) {
-  if(roundResult === USER_ROUND_WON) {
+  if(roundResult === USER_ROUND_WON_MSSG) {
      playerScore += 1;
   }
-  if (roundResult === USER_ROUND_LOST) {
+  if (roundResult === USER_ROUND_LOST_MSSG) {
      computerScore += 1;
   }
 }
@@ -60,10 +67,10 @@ function decideRoundWinner(roundResult) {
 
 function decideGameWinner() {
     if (playerScore > computerScore) {
-        alert(GAME_WON);
+        alert(GAME_WON_MSSG);
     }
     if (playerScore < computerScore) {
-        alert(GAME_LOST);
+        alert(GAME_LOST_MSSG);
     }
     // alert('IT\'S A DRAW');
 }
@@ -71,6 +78,7 @@ function decideGameWinner() {
 // game();
 decideGameWinner();
 
+<<<<<<< HEAD
   
 // Creating elements
 
@@ -96,3 +104,7 @@ buttons.forEach((btnText) => {
 // // scissorsButton.classList.add()
 // container.append(rockButton, paperButton, scissorsButton);
 // container.append(rockButton);
+=======
+playerScore = 0;
+computerScore = 0;
+>>>>>>> bf2b26b4cb4006e8d43e2225a44c2a9a5635c12d
