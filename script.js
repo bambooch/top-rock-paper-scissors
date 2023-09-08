@@ -69,21 +69,26 @@ function decideGameWinner() {
 }
 
 // game();
-decideGameWinner();
+// decideGameWinner();
 
   
 // Creating elements
 
 const container = document.querySelector('#container');
-const resultDisplay = document.createElement('div');
-const buttons = ['rock', 'scissor', 'paper'];
 
-buttons.forEach((btnText) => {
-  const newButton = document.createElement('button');
-  newButton.textContent = btnText;
-  newButton.classList.add(`${btnText}-btn`);
-  container.append(newButton);
-});
+
+// const resultDisplay = document.createElement('div');
+// resultDisplay.classList.add('result-display');
+// container.append(resultDisplay);
+
+
+// const buttons = ['rock', 'scissor', 'paper'];
+// buttons.forEach((btnText) => {
+//   const newButton = document.createElement('button');
+//   newButton.textContent = btnText;
+//   newButton.classList.add(`${btnText}-btn`);
+//   container.append(newButton);
+// });
 
 // const rockButton = document.createElement('button');
 // rockButton.classList.add('rock-bttn');
