@@ -7,13 +7,6 @@ let computerScore = 0;
 const GAME_LOST_MSSG= "Too Bad! Computer won this game!";
 const GAME_WON_MSSG = "Congratulations! You won this game!";
 
-<<<<<<< HEAD
-=======
-const USER_ROUND_WON_MSSG = "You won this round!";
-const USER_ROUND_LOST_MSSG = "You lost this round!";
-const USER_ROUND_TIE_MSSG = "It's a tie!";
-
->>>>>>> bf2b26b4cb4006e8d43e2225a44c2a9a5635c12d
 
 function getComputerChoice() {
   const computerSelection = ["rock", "paper", "scissors"];
@@ -76,22 +69,27 @@ function decideGameWinner() {
 }
 
 // game();
-decideGameWinner();
+// decideGameWinner();
 
 <<<<<<< HEAD
   
 // Creating elements
 
 const container = document.querySelector('#container');
-const resultDisplay = document.createElement('div');
-const buttons = ['rock', 'scissor', 'paper'];
 
-buttons.forEach((btnText) => {
-  const newButton = document.createElement('button');
-  newButton.textContent = btnText;
-  newButton.classList.add(`${btnText}-btn`);
-  container.append(newButton);
-});
+
+// const resultDisplay = document.createElement('div');
+// resultDisplay.classList.add('result-display');
+// container.append(resultDisplay);
+
+
+// const buttons = ['rock', 'scissor', 'paper'];
+// buttons.forEach((btnText) => {
+//   const newButton = document.createElement('button');
+//   newButton.textContent = btnText;
+//   newButton.classList.add(`${btnText}-btn`);
+//   container.append(newButton);
+// });
 
 // const rockButton = document.createElement('button');
 // rockButton.classList.add('rock-bttn');
