@@ -77,9 +77,36 @@ function decideGameWinner() {
 const container = document.querySelector('#container');
 
 
-// const resultDisplay = document.createElement('div');
-// resultDisplay.classList.add('result-display');
-// container.append(resultDisplay);
+let buttons = document.querySelectorAll('.btn');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    let playerSelection = button.textContent;
+    console.log(playRound(playerSelection));    
+  });
+  // let roundScore = document.getElementsByClassName('.round-score').textContent(playRound(playerSelection));
+});
+
+// let roundScore = document.getElementsByClassName('.round-score');
+// roundScore.textContent = 'twenty';
+
+
+// const buttons = ['rock', 'scissor', 'paper'];
+// buttons.forEach((btnText) => {
+//   const newButton = document.createElement('button');
+//   newButton.textContent = btnText;
+//   newButton.classList.add(`${btnText}-btn`);
+//   container.append(newButton);
+// });
+
+
+
+
+
+
+
+
+
 
 
 // const buttons = ['rock', 'scissor', 'paper'];
