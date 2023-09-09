@@ -7,11 +7,6 @@ let computerScore = 0;
 const GAME_LOST_MSSG= "Too Bad! Computer won this game!";
 const GAME_WON_MSSG = "Congratulations! You won this game!";
 
-const USER_ROUND_TIE = 'It\'s a tie';
-const USER_ROUND_WON = 'You won this round';
-const USER_ROUND_LOST = 'You lost this round';
-
-
 
 function getComputerChoice() {
   const computerSelection = ["rock", "paper", "scissors"];
@@ -22,7 +17,6 @@ function getComputerChoice() {
 
 // console.log(getComputerChoice());
 
-<<<<<<< HEAD
 function getPlayerSelection() {
   let playerSelectionPrompt = prompt(
     "Make your choice: ROCK, PAPER or SCISSORS!"
@@ -51,35 +45,6 @@ function playRound() {
   return USER_ROUND_LOST_MSSG;
 }
 
-=======
-// function getPlayerSelection() {
-  //   let playerSelectionPrompt = prompt(
-    //     "Choose your weapon: ROCK, PAPER or SCISSORS!"
-    //   ).toLowerCase();
-    //   return playerSelectionPrompt;
-    // }
-    
-    function playRound(playerSelection) {
-      let computerSelection = getComputerChoice();
-      playerSelection = playerSelection.toLowerCase();
-      
-      if (playerSelection === computerSelection) {
-        return USER_ROUND_TIE;
-      }
-      if (playerSelection === "rock" && computerSelection === "scissors") {
-        return USER_ROUND_WON;
-      }
-      if (playerSelection === "paper" && computerSelection === "rock") {
-        return USER_ROUND_WON;
-      }
-      if (playerSelection === "scissors" && computerSelection === "paper") {
-        return USER_ROUND_WON;
-      }
-        return USER_ROUND_LOST;
-    }
-// console.log(getPlayerSelection());
-
->>>>>>> rps-ui
 // console.log(playRound());
 
 
@@ -106,40 +71,25 @@ function decideGameWinner() {
 // game();
 // decideGameWinner();
 
-<<<<<<< HEAD
   
 // Creating elements
 
 const container = document.querySelector('#container');
 
 
-let buttons = document.querySelectorAll('.btn');
-
-buttons.forEach((button) => {
-  button.addEventListener('click', () => {
-    let playerSelection = button.textContent;
-    console.log(playRound(playerSelection));    
-  });
-  // let roundScore = document.getElementsByClassName('.round-score').textContent(playRound(playerSelection));
-});
-
-// let roundScore = document.getElementsByClassName('.round-score');
-// roundScore.textContent = 'twenty';
+// const resultDisplay = document.createElement('div');
+// resultDisplay.classList.add('result-display');
+// container.append(resultDisplay);
 
 
+// const buttons = ['rock', 'scissor', 'paper'];
+// buttons.forEach((btnText) => {
+//   const newButton = document.createElement('button');
+//   newButton.textContent = btnText;
+//   newButton.classList.add(`${btnText}-btn`);
+//   container.append(newButton);
+// });
 
-
-
-
-
-
-
-
-
-
-
-
-<<<<<<< HEAD
 // const rockButton = document.createElement('button');
 // rockButton.classList.add('rock-bttn');
 // rockButton.textContent = 'ROCK';
@@ -151,9 +101,5 @@ buttons.forEach((button) => {
 // // scissorsButton.classList.add()
 // container.append(rockButton, paperButton, scissorsButton);
 // container.append(rockButton);
-=======
 playerScore = 0;
 computerScore = 0;
->>>>>>> bf2b26b4cb4006e8d43e2225a44c2a9a5635c12d
-=======
->>>>>>> rps-ui
