@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>Rock, Paper, Scissors</title>
 </head>
@@ -15,19 +14,21 @@
                 <h2 class="player-name">PLAYER</h2>
                 <p class="player-score">1</p>
             </div>
+            <span class="round-score">1</span>
             <div class="computer-stats">
                 <h2 class="computer-name">COMPUTER</h2>
                 <p class="computer-score">1</p>
             </div>
         </div>
 
-
-        <div class="buttons">
-        <button type="submit" class="rock-btn" id="rock-btn">ROCK</button>
-        <button type="submit" class="paper-btn" id="paper-btn">PAPER</button>
-        <button type="submit" class="scissors-btn" id="scissors-btn">SCISSORS</button>
-
+        
+        <div class="buttons" id="buttons">
+            <button type="submit" class="rock btn" id="rock-btn">ROCK</button>
+            <button type="submit" class="paper btn" id="paper-btn">PAPER</button>
+            <button type="submit" class="scissors btn" id="scissors-btn">SCISSORS</button>
+            
         </div>
     </div>
+    <script src="script.js" defer></script>
 </body>
 </html>

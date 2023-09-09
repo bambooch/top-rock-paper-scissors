@@ -7,6 +7,11 @@ let computerScore = 0;
 const GAME_LOST = "Too Bad! Computer won this game!";
 const GAME_WON = "Congratulations! You won this game!";
 
+const USER_ROUND_TIE = 'It\'s a tie';
+const USER_ROUND_WON = 'You won this round';
+const USER_ROUND_LOST = 'You lost this round';
+
+
 
 function getComputerChoice() {
   const computerSelection = ["rock", "paper", "scissors"];
@@ -17,33 +22,32 @@ function getComputerChoice() {
 
 // console.log(getComputerChoice());
 
-function getPlayerSelection() {
-  let playerSelectionPrompt = prompt(
-    "Choose your weapon: ROCK, PAPER or SCISSORS!"
-  ).toLowerCase();
-  return playerSelectionPrompt;
-}
-
+// function getPlayerSelection() {
+  //   let playerSelectionPrompt = prompt(
+    //     "Choose your weapon: ROCK, PAPER or SCISSORS!"
+    //   ).toLowerCase();
+    //   return playerSelectionPrompt;
+    // }
+    
+    function playRound(playerSelection) {
+      let computerSelection = getComputerChoice();
+      playerSelection = playerSelection.toLowerCase();
+      
+      if (playerSelection === computerSelection) {
+        return USER_ROUND_TIE;
+      }
+      if (playerSelection === "rock" && computerSelection === "scissors") {
+        return USER_ROUND_WON;
+      }
+      if (playerSelection === "paper" && computerSelection === "rock") {
+        return USER_ROUND_WON;
+      }
+      if (playerSelection === "scissors" && computerSelection === "paper") {
+        return USER_ROUND_WON;
+      }
+        return USER_ROUND_LOST;
+    }
 // console.log(getPlayerSelection());
-
-function playRound() {
-  let playerSelection = getPlayerSelection();
-  let computerSelection = getComputerChoice();
-
-  if (playerSelection === computerSelection) {
-    return USER_ROUND_TIE;
-  }
-  if (playerSelection === "rock" && computerSelection === "scissors") {
-    return USER_ROUND_WON;
-  }
-  if (playerSelection === "paper" && computerSelection === "rock") {
-    return USER_ROUND_WON;
-  }
-  if (playerSelection === "scissors" && computerSelection === "paper") {
-    return USER_ROUND_WON;
-  }
-  return USER_ROUND_LOST;
-}
 
 // console.log(playRound());
 
@@ -77,27 +81,29 @@ function decideGameWinner() {
 const container = document.querySelector('#container');
 
 
-// const resultDisplay = document.createElement('div');
-// resultDisplay.classList.add('result-display');
-// container.append(resultDisplay);
+let buttons = document.querySelectorAll('.btn');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    let playerSelection = button.textContent;
+    console.log(playRound(playerSelection));    
+  });
+  // let roundScore = document.getElementsByClassName('.round-score').textContent(playRound(playerSelection));
+});
+
+// let roundScore = document.getElementsByClassName('.round-score');
+// roundScore.textContent = 'twenty';
 
 
-// const buttons = ['rock', 'scissor', 'paper'];
-// buttons.forEach((btnText) => {
-//   const newButton = document.createElement('button');
-//   newButton.textContent = btnText;
-//   newButton.classList.add(`${btnText}-btn`);
-//   container.append(newButton);
-// });
 
-// const rockButton = document.createElement('button');
-// rockButton.classList.add('rock-bttn');
-// rockButton.textContent = 'ROCK';
-// const paperButton = document.createElement('button');
-// paperButton.classList.add('paper-bttn');
-// paperButton.textContent = 'PAPER';
-// const scissorsButton = document.createElement('button');
-// scissorsButton.textContent = 'SCISSORS';
-// // scissorsButton.classList.add()
-// container.append(rockButton, paperButton, scissorsButton);
-// container.append(rockButton);
+
+
+
+
+
+
+
+
+
+
+
