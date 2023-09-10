@@ -88,7 +88,7 @@ buttons.forEach((button) => {
     let playerSelection = button.textContent;
     console.log(playRound(playerSelection));    
     document.getElementById('round-score').textContent = playRound(playerSelection);
-  }) ;
+  });
 });
 
 // let roundScore = document.getElementsByClassName('.round-score');
